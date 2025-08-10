@@ -1,0 +1,6 @@
+server.port: ${PORT:9902}
+n1netails.zenko.logtail:
+  files: ${N1NETAILS_ZENKO_LOGTAIL_FILES}
+  keywords: ${N1NETAILS_ZENKO_LOGTAIL_KEYWORDS:ERROR,Exception,CRITICAL,FATAL,WARN,Traceback,FAIL,Failure,PANIC}
+  alert-endpoint: ${N1NETAILS_API_ALERT_ENDPOINT:http://localhost:9901/ninetails/alert}
+  alert-token: ${N1NETAILS_API_ALERT_TOKEN}

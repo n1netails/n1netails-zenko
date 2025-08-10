@@ -1,0 +1,16 @@
+services:
+  # N1netails Zenko
+  zenko:
+    image: shahidfo/n1netails-zenko:latest
+    container_name: n1netails_zenko
+    ports:
+      - "9902:9902"
+    environment:
+      SPRING_PROFILE_ACTIVE: docker
+      N1NETAILS_ZENKO_LOGTAIL_FILES: /logs/service1/app.log,/logs/service2/other.log
+      N1NETAILS_ZENKO_LOGTAIL_KEYWORDS: ERROR,Exception,CRITICAL,FATAL,WARN,Traceback,FAIL,Failure,PANIC
+      N1NETAILS_API_ALERT_ENDPOINT: https://app.n1netails.com/ninetails/alert
+      N1NETAILS_API_ALERT_TOKEN: your-n1ne-token
+    volumes:
+      - /path/to/your/service1/logs:/logs/service1:ro
+      - /path/to/your/service2/logs:/logs/service2:ro

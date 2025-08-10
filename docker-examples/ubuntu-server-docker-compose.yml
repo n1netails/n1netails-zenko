@@ -1,0 +1,16 @@
+services:
+  # N1netails Zenko
+  zenko:
+    image: shahidfo/n1netails-zenko:latest
+    container_name: n1netails_zenko
+    ports:
+      - "9902:9902"
+    environment:
+      SPRING_PROFILE_ACTIVE: docker
+      N1NETAILS_ZENKO_LOGTAIL_FILES: /logs/cyberchefai/cyberchefai-log.txt,/logs/cheflei-service/cheflei-service-log.txt
+      N1NETAILS_ZENKO_LOGTAIL_KEYWORDS: ERROR,Exception,CRITICAL,FATAL,WARN,Traceback,FAIL,Failure,PANIC
+      N1NETAILS_API_ALERT_ENDPOINT: https://app.n1netails.com/ninetails/alert
+      N1NETAILS_API_ALERT_TOKEN: c8f36742-a0fe-4915-8087-d0d7a5aa8424
+    volumes:
+      - /projects/cyberchefai:/logs/cyberchefai:ro
+      - /projects/cheflei-service:/logs/cheflei-service:ro
