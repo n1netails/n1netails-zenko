@@ -133,7 +133,7 @@ java \
 -DPORT=9902 \
 -DN1NETAILS_ZENKO_LOGTAIL_FILES=/logs/service1/app.log,/logs/service2/other.log \
 -DN1NETAILS_ZENKO_LOGTAIL_KEYWORDS=ERROR,Exception,CRITICAL,FATAL,WARN,Traceback,FAIL,Failure,PANIC \
--DN1NETAILS_API_ALERT_ENDPOINT=http://localhost:9901/ninetails/alert \
+-DN1NETAILS_API_ALERT_ENDPOINT=https://app.n1netails.com/ninetails/alert \
 -DN1NETAILS_API_ALERT_TOKEN=your-n1ne-token \
 -jar target/n1netails-zenko.jar
 ```
