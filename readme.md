@@ -42,7 +42,7 @@ ERROR, Exception, CRITICAL, FATAL, WARN, Traceback, FAIL, Failure, PANIC
 
 ### Requirements
 
-Zenko works best alongside the N1netails core system, but it can also operate standalone as a simple tailing service for keyword-based alerts.
+Zenko works best alongside the N1netails core system, but it can also run as a simple tailing service that you can plug into your own system for keyword-based alerts.
 Learn more about the core system here: [N1netails](https://github.com/n1netails/n1netails)
 
 ---
