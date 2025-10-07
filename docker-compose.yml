@@ -10,7 +10,7 @@ services:
       N1NETAILS_ZENKO_LOGTAIL_FILES: /logs/service1/app.log,/logs/service2/other.log
       N1NETAILS_ZENKO_LOGTAIL_KEYWORDS: ERROR,Exception,CRITICAL,FATAL,WARN,Traceback,FAIL,Failure,PANIC
       N1NETAILS_API_ALERT_ENDPOINT: https://app.n1netails.com/ninetails/alert
-      N1NETAILS_API_ALERT_TOKEN: your-n1ne-token
+      N1NETAILS_API_ALERT_TOKEN: n1_your-n1ne-token
     volumes:
       - /path/to/your/service1/logs:/logs/service1:ro
       - /path/to/your/service2/logs:/logs/service2:ro

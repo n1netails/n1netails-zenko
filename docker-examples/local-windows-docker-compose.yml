@@ -13,6 +13,6 @@ services:
       N1NETAILS_ZENKO_LOGTAIL_FILES: /logs/cheflei-service-log.txt,/logs/cyberchefai-log.txt
       N1NETAILS_ZENKO_LOGTAIL_KEYWORDS: ERROR,Exception,CRITICAL,FATAL,WARN,Traceback,FAIL,Failure,PANIC
       N1NETAILS_API_ALERT_ENDPOINT: http://host.docker.internal:9901/ninetails/alert
-      N1NETAILS_API_ALERT_TOKEN: c8f36742-a0fe-4915-8087-d0d7a5aa8424
+      N1NETAILS_API_ALERT_TOKEN: n1_e77PlbDefcVvXOyP5bOrSePbJbJ1pGHr9ZDExYxbe6HtSc1EZBPVMlFITfN_2wz9HuOXCkrAsrrLDZk6EY09Hg
     volumes:
       - D:\N1NE_TAILS\POC\log:/logs
