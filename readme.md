@@ -49,13 +49,13 @@ Learn more about the core system here: [N1netails](https://github.com/n1netails/
 
 ## Configuration — Environment Variables
 
-| Variable                           | Description                                       | Default                                                            |
-| ---------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------ |
-| `PORT`                             | Application port                                  | 9902                                                               |
-| `N1NETAILS_ZENKO_LOGTAIL_FILES`    | Comma-separated list of log file paths to monitor | *No default*                                                       |
-| `N1NETAILS_ZENKO_LOGTAIL_KEYWORDS` | Comma-separated alert keywords                    | `ERROR,Exception,CRITICAL,FATAL,WARN,Traceback,FAIL,Failure,PANIC` |
-| `N1NETAILS_API_ALERT_ENDPOINT`     | URL endpoint to send alert data                   | `http://localhost:9901/ninetails/alert`                            |
-| `N1NETAILS_API_ALERT_TOKEN`        | Optional token for authentication (n1ne-token)    | *Optional*                                                         |
+| Variable                           | Description                                       | Default                                                                                                   |
+| ---------------------------------- | ------------------------------------------------- |-----------------------------------------------------------------------------------------------------------|
+| `PORT`                             | Application port                                  | 9902                                                                                                      |
+| `N1NETAILS_ZENKO_LOGTAIL_FILES`    | Comma-separated list of log file paths to monitor | *No default*                                                                                              |
+| `N1NETAILS_ZENKO_LOGTAIL_KEYWORDS` | Comma-separated alert keywords                    | `ERROR,Exception,CRITICAL,FATAL,WARN,Traceback,FAIL,Failure,PANIC`                                        |
+| `N1NETAILS_API_ALERT_ENDPOINT`     | URL endpoint to send alert data                   | `http://localhost:9901/ninetails/alert`                                                                   |
+| `N1NETAILS_API_ALERT_TOKEN`        | Optional token for authentication (n1ne-token)    | *Optional* learn how to make a token here. https://n1netails.com/docs/n1netails/n1netails-post-tail-alert |
 
 **Example log file paths:**
 
@@ -134,7 +134,7 @@ java \
 -DN1NETAILS_ZENKO_LOGTAIL_FILES=/logs/service1/app.log,/logs/service2/other.log \
 -DN1NETAILS_ZENKO_LOGTAIL_KEYWORDS=ERROR,Exception,CRITICAL,FATAL,WARN,Traceback,FAIL,Failure,PANIC \
 -DN1NETAILS_API_ALERT_ENDPOINT=https://app.n1netails.com/ninetails/alert \
--DN1NETAILS_API_ALERT_TOKEN=your-n1ne-token \
+-DN1NETAILS_API_ALERT_TOKEN=n1_your-n1ne-token \
 -jar target/n1netails-zenko.jar
 ```
 
@@ -156,7 +156,7 @@ mvn spring-boot:run \
   -DN1NETAILS_ZENKO_LOGTAIL_FILES=/projects/cyberchefai/cyberchefai-log.txt,/projects/cheflei-service/cheflei-service-log.txt \
   -DN1NETAILS_ZENKO_LOGTAIL_KEYWORDS=ERROR,Exception,CRITICAL,FATAL,WARN,Traceback,FAIL,Failure,PANIC \
   -DN1NETAILS_API_ALERT_ENDPOINT=http://localhost:9901/ninetails/alert \
-  -DN1NETAILS_API_ALERT_TOKEN=your-n1ne-token
+  -DN1NETAILS_API_ALERT_TOKEN=n1_your-n1ne-token
 ```
 
 ---
